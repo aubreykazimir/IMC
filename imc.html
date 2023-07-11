@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Cette balise permet de mettre un titre dans l'onglet lié au site web.-->
+    <title>THE DamWeb's project</title>
+    <link rel="shortcut icon" type="image/x-icon" href="cat-paw.png" />
+    <!--Bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./mon-style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<!--Corps du site-->
+
+<body class="container" style="width: 768px;">
+    <header>
+        <h1>Welcome to the DamWeb's project!</h1>
+    </header>
+    <div class="row align-items-start">
+        <nav class="navbar bg-light col-2">
+
+            <div class="container-fluid">
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Acceuil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./chien.html">Canidés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./chat.html">Félins</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./humain.html">Humain.e</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="col-10">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link nav-justified active" href="#kesako" id="kesako-link">Késako?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tuto" id="tuto-link">évaluer
+                        son IMC et l'interpréter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#calcul" id="calcul-link">Découvrir
+                        son IMC</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="kesako-contain">
+                <div class="tab-pane fade show active" id="kesako" role="tabpanel" aria-labelledby="kesako-tab">
+                    <h2>L'IMC(BMI), késako ?</h2>
+                    <p>L'indice de masse corporelle (body mass index ou BMI
+                        en anglais) est utilisé depuis 1997 par
+                        l’Organisation mondiale de la santé (OMS),
+                        principalement pour évaluer les risques liés au
+                        surpoids et à l’obésité chez l’adulte de 18 à 65
+                        ans. Cet
+                        indicateur permet de savoir si notre poids est
+                        adapté proportionnellement à notre taille, ou s’il
+                        présente un danger potentiel pour notre santé. Il
+                        repose sur une simple formule mathématique qui prend
+                        en compte la taille et le poids de
+                        chaque individu.
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="tuto" role="tabpanel" aria-labelledby="tuto-tab">
+                    <h2>Tutoriel: évaluer son IMC et l'interpréter</h2>
+                    <p>L'indice de masse corporelle est calculé en divisant
+                        le poids (exprimé en kilos) par la taille au carré
+                        (exprimée en mètres). La formule est la même pour
+                        les hommes et les femmes : IMC = poids en kg /
+                        taille² en m.</p>
+
+                    <p>Si vous pesez 63 kg et que vous mesurez 1,70 m, il
+                        suffit par exemple de multiplier 1,70 par 1,70, ce
+                        qui donne 2,89. Vous divisez ensuite votre poids,
+                        63, par 2,89, ce qui vous donne un IMC de 21,8
+                        kg/m². Reste à interpréter ce résultat avec
+                        les données ci-dessous. L’IMC peut être calculé
+                        seul, ou chez un médecin. L’OMS définit plusieurs
+                        seuils d’alerte :
+                    </p>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>IMC (kg/m²) </th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>en dessous de 18,4</td>
+                                <td>la personne est maigre</td>
+                            </tr>
+                            <tr>
+                                <td>entre 18,5 et 24,9</td>
+                                <td>la personne a une corpulence "normale"</td>
+                            </tr>
+                            <tr>
+                                <td>entre 25 et 29,9</td>
+                                <td>la personne est en surpoids</td>
+                            </tr>
+                            <tr>
+                                <td>entre 30 à 34,9</td>
+                                <td>la personne est en obésité modérée</td>
+                            </tr>
+                            <tr>
+                                <td>entre 35 et 39,9</td>
+                                <td>la personne est en obésité sévère</td>
+                            </tr>
+                            <tr>
+                                <td>au-dessus de 40</td>
+                                <td>la personne est en obésité morbide</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="calcul" role="tabpanel" aria-labelledby="calcul-tab">
+                    <form id="bmiform" class="mb-2">
+                        <div class="input-group mb-2">
+                            <label for="taille" class="input-group-text">Taille</label>
+                            <input type="number" class="form-control" id="height" 
+                            placeholder="Veuillez insérer votre taille en cm." min="1" required>
+                            <span class="input-group-text">cm</span>
+                        </div>
+                        <div class="input-group mb-2">
+                            <label for="weight" class="input-group-text">Poids</label>
+                            <input type="number" class="form-control" id="weight" 
+                            placeholder="Veuillez insérer votre poids en kilogramme." min="1" required>
+                            <span class="input-group-text">kg</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="btn-group">
+                                <button type="reset" class="btn btn-warning" id="cancel">Annuler</button>
+                                <button type="submit" class="btn
+                                        btn-success" id="ok">Valider</button>
+                            </div>
+                        </div>
+                    </form>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>IMC (kg/m²) </th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="maigre">
+                                <td>en dessous de 18,4</td>
+                                <td>la personne est maigre</td>
+                            </tr>
+                            <tr id="normal">
+                                <td>entre 18,5 et 24,9</td>
+                                <td>la personne a une corpulence "normale"</td>
+                            </tr>
+                            <tr id="surpoids">
+                                <td>entre 25 et 29,9</td>
+                                <td>la personne est en surpoids</td>
+                            </tr>
+                            <tr id="modere">
+                                <td>entre 30 à 34,9</td>
+                                <td>la personne est en obésité modérée</td>
+                            </tr>
+                            <tr id="severe">
+                                <td>entre 35 et 39,9</td>
+                                <td>la personne est en obésité sévère</td>
+                            </tr>
+                            <tr id="danger">
+                                <td>au-dessus de 40</td>
+                                <td>la personne est en obésité morbide</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered historique" id="historique">
+                        <thead>
+                            <th>Date</th>
+                            <th>IMC</th>
+                        </thead>
+                        <tbody id="contentHistorique">
+
+                        </tbody>
+                    </table>
+                    <script src="./script/verif_form.js" type="text/javascript"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal résultat IMC-->
+    <!-- The Modal -->
+    <div class="modal modal-open" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Votre IMC</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="close"></button>
+                </div>
+
+                <!-- Modal corps -->
+                <div class="modal-body">
+                    <div>
+                        <p id="result"></p>
+                        <P id="sentence"></P>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            id="close-button">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin de page-->
+    <footer class="d-flex justify-content-around">
+<<<<<<< HEAD
+        <span>Copyright: Dam </span>
+        <span>Groupe: CSS119</span>
+=======
+        <span>Identité: <a href="https://poesi.esi-bru.be/user/profile.php?id=769">Derumier
+                Damla (58131)</a></span>
+        <span>Groupe: B111</span>
+        <span> Professeur: <a href="https://poesi.esi-bru.be/user/view.php?id=19&course=86">DNA</a></span>
+>>>>>>> f61ab7092e2aab010bad40273ecf161a568e54f1
+    </footer>
+    <script src="./script/onglet.js" type="text/javascript"></script>
+</body>
+
+</html>
