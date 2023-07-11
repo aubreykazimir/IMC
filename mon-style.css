@@ -15,11 +15,7 @@ body {
     background-color: rgb(240, 240, 240, 0.8);
 }
 
-<<<<<<< HEAD
 .alimentation>img {
-=======
-.alimentation>img{
->>>>>>> f61ab7092e2aab010bad40273ecf161a568e54f1
     width: 100%;
 }
 
@@ -47,11 +43,7 @@ div.alimentation>p {
     display: block;
 }
 
-<<<<<<< HEAD
 tr.color {
-=======
-tr.color{
->>>>>>> f61ab7092e2aab010bad40273ecf161a568e54f1
     background-color: #00bfff;
 }
 
